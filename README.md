@@ -205,14 +205,14 @@ urlpatterns = [
 
 项目截图
 
-![](F:/CS/git/bilibili_data/img/1.png)
+![](https://github.com/ShawnKS/bilibili_data/blob/main/img/1.png?raw=true)
 
-![](F:/CS/git/bilibili_data/img/2.png)
+![](https://github.com/ShawnKS/bilibili_data/blob/main/img/2.png?raw=true)
 
-![](F:/CS/git/bilibili_data/img/3.png)
+![](https://github.com/ShawnKS/bilibili_data/blob/main/img/3.png?raw=true)
 
-![](F:/CS/git/bilibili_data/img/4.png)
+![](https://github.com/ShawnKS/bilibili_data/blob/main/img/4.png?raw=true)
 
-![](F:/CS/git/bilibili_data/img/5.png)
+![](https://github.com/ShawnKS/bilibili_data/blob/main/img/5.png?raw=true)
 
-![](F:/CS/git/bilibili_data/img/6.png)
+![](img/6.png)
