@@ -1,0 +1,24 @@
+$base-space: 1rem
+$spacings: (0: 0, 1: 0.25 * $base-space, 2: 0.5 * $base-space, 3: $base-space, 4: 1.5 * $base-space, 5: 3 * $base-space, auto: auto)
+
+@each $key, $value in $spacings
+  .p-#{$key}
+    padding: $value !important
+  .m-#{$key}
+    margin: $value !important
+  .py-#{$key}, .pt-#{$key}
+    padding-top: $value !important
+  .my-#{$key}, .mt-#{$key}
+    margin-top: $value !important
+  .py-#{$key}, .pb-#{$key}
+    padding-bottom: $value !important
+  .my-#{$key}, .mb-#{$key}
+    margin-bottom: $value !important
+  .px-#{$key}, .pl-#{$key}
+    padding-left: $value !important
+  .mx-#{$key}, .ml-#{$key}
+    margin-left: $value !important
+  .px-#{$key}, .pr-#{$key}
+    padding-right: $value !important
+  .mx-#{$key}, .mr-#{$key}
+    margin-right: $value !important

@@ -1,0 +1,74 @@
+::-webkit-scrollbar
+  width: .72rem
+  height: .72rem
+  background-color: $light
+
+::-webkit-scrollbar-track
+  border-radius: 1rem
+  background-color: $light
+
+::-webkit-scrollbar-thumb
+  border-radius: 10px
+  background-color: $grey-dark
+
+  &:hover
+    background-color: $light-invert
+
+  &:active
+    background-color: $primary
+
+*::selection
+  background-color: $primary
+  color: $light
+
+.button, .input, .pagination
+  @extend .is-rounded
+
+.button.is-small
+  @extend .button, .is-small, .is-rounded
+
+.content
+  figure.image
+    @extend .mx-0
+    border-radius: 4px
+    overflow: hidden
+
+.icon
+  svg
+    width: 100%
+    height: 100%
+
+.field
+  .input, .label
+    transition: color .5s $easing, background-color .5s $easing, border .5s $easing, box-shadow .5s $easing
+
+.table
+  @extend .is-fullwidth, .is-hoverable, .is-striped
+
+  &.has-header-centered
+    th
+      @extend .has-text-centered
+      vertical-align: middle
+
+.card
+  border-radius: 4px
+
+.button.is-anchor
+  border: none
+  background: none
+  padding: 0
+  margin: 0
+  display: inline
+  height: unset
+  color: $primary
+  border-radius: 4px
+
+  &:hover, &:active
+    text-decoration: underline
+
+button.navbar-burger
+  background: none
+  border: none
+
+.navbar
+  box-shadow: $box-shadow

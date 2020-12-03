@@ -1,0 +1,68 @@
+@import "../styles/variables";
+
+$items: (
+  (25%, 80px, 80px, 0, 0),
+  (10%, 20px, 20px, 2s, 12s),
+  (70%, 20px, 20px, 4s, 0),
+  (40%, 60px, 60px, 0, 18s),
+  (65%, 20px, 20px, 0, 0),
+  (75%, 110px, 110px, 3s, 0),
+  (35%, 150px, 150px, 7s, 0),
+  (50%, 25px, 25px, 15s, 45s),
+  (20%, 15px, 15px, 2s, 35s),
+  (85%, 150px, 150px, 0s, 11s),
+);
+
+$keys: ("left", "width", "height", "animation-delay", "animation-duration");
+
+.background-effect {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+
+  .circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    li {
+      position: absolute;
+      display: block;
+      list-style: none;
+      width: 20px;
+      height: 20px;
+      background: adjust_color($primary, $alpha: -.5);
+      animation: animate 25s linear infinite;
+      bottom: -150px;
+
+      @for $m from 1 through length($items) {
+        &:nth-child(#{$m}) {
+          $item: nth($items, $m);
+          @for $n from 1 through length($item) {
+            #{nth($keys, $n)}: nth($item, $n);
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes animate {
+  from {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+
+  to {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
